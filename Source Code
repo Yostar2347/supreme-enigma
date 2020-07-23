@@ -1,0 +1,339 @@
+#include<stdio.h>
+#include<conio.h>
+#include<ctype.h>
+#include<stdlib.h>
+#include<string.h>
+
+void help();
+
+int main()
+     {
+
+     int countr=0,r,r1,count,i,n,c;
+     int prn[20],batch[3];
+     float score;
+     char choice,choice_2,choice_3,a_o_i;
+     char plnm[20];
+
+     mainhome_1:
+     system("cls");
+     printf("\n\t\t________________________________________");
+     printf("\n\t\t\t   Hey'ya !!! ");
+     printf("\n\t\t________________________________________");
+     printf("\n\t\t\t   What is it which disappears when you say it's name ? ");
+     printf("\n\t\t     Curious to know ?");
+     printf("\n\t\t________________________________________");
+     printf("\n\t\t     Press any key to know the answer but you are bound to follow certain rules !!");
+     printf("\n\t\t________________________________________");
+     //test1=toupper();
+     getch();
+     mainhome:
+     system("cls");
+     printf("\t\t\tC PROGRAM QUIZ GAME\n");
+     printf("\n\t\t   Play the following quiz to reach your answer :    ") ;
+     printf("\n\t\t________________________________________");
+     printf("\n\t\t________________________________________");
+     printf("\n\t\t > Press S to start the game");
+     printf("\n\t\t > press H for help            ");
+     printf("\n\t\t > press any other key to quit             ");
+     printf("\n\t\t________________________________________\n\n");
+     choice=toupper(getch());
+
+    if (choice=='H')
+    {
+	help();getch();
+	goto mainhome;
+
+	}
+
+    else if(choice=='S')
+    {system("cls");
+    printf("\n\n\n\n\t\t\tResister your name:");
+    scanf("%s",&plnm);
+    printf("\n\n\n\n\t\t\tResister your prn:");
+    scanf("%d",&prn);
+    printf("\n\n\n\n\t\t\tResister your batch:");
+    scanf("%d",&batch);
+    printf("\n\n\n\n\t\t\tPlease select your area of interest from the following :\n\t\t\t A)science and technology\n\t\t\t B)Sports\n\t\t\t C)Maths");//Add details for area of interests
+    scanf("%c",&a_o_i);
+    a_o_i=toupper(getch());
+
+    system("cls");
+    printf("\n ------------------  Welcome %s to the Quiz Game KNOW THE ANSWER --------------------------",plnm);
+    printf("\n >> Since this quiz is conducted to know the student's interests and his general knowledge ");
+    printf("\n >> Next, you will have to press Y and you will be guided to a Questionaire round where you will encounter 5 multiple\n choice questions");
+    printf("\n >> You can play the game only once, each time any other user plays the game");
+    printf("\n >> To answer, you have to enter the options you feel are correct");
+    printf("\n >> As soon as you complete the game, you will get your scores ");
+    printf("\n_______________________________________________________________________________________________________");
+    printf("\n                                       ALL THE BEST, ENJOY!!     ");
+    printf("\n >> Press Y to play the game ");
+    if (toupper(getch())=='Y')
+		{
+		    goto test;
+        }
+	else
+		{
+        goto mainhome_1;
+
+       system("cls");
+       }
+
+
+
+     test:
+     system("cls");
+     printf("\n\n\t*** Welcome %s to the Quiz Game KNOW THE ANSWER ***",plnm);
+     printf("\n\n\n\n\t!Press Y key to Start the Game!");
+     if(toupper(getch())=='Y')
+		{goto game;}
+     game:
+
+     if(a_o_i=='A')
+     {
+
+
+         for(i=1;i<=5;i++)
+        {
+            system("cls");
+
+
+            switch(i)
+            {
+                case 1:
+                printf("\n\nThe term Biomagnifications is referred to as");
+                printf("\n\n A) increase in the body weight\n B) uncontrolled growth of harmful organisms\n C) accumulation of increasing amount of non-degradable pollutant through food chain\n D) increase in the number of bacteria in a culture medium");
+                if (toupper(getch())=='C')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is C) accumulation of increasing amount of non-degradable pollutant through food chain");getch();
+
+                break;}
+
+                case 2:
+                printf("\n\nWhich of the following was invented by Sir Humphry Davy ?");
+                printf("\n\n A)Safety Pin\n B) Steam Engine\n C) Safety Lamp\n D) X-Rays");
+                if (toupper(getch())=='C')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is C) Safety Lamp");getch();
+
+                break;}
+
+                case 3:
+                printf("\n\nWhich of the following was first Atomic Reactor in India ?");
+                printf("\n\n A) Purnima-1\n B) Apsara\n C) Kamini\n D) Dhruva");
+                if (toupper(getch())=='B')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is B) Apsara ");getch();
+
+                break;}
+
+                case 4:
+                printf("\n\nWhich of the following was the first digital wallet company in India ?");
+                printf("\n\n A) Paytm\n B) Mobikwik\n C) Freecharge\n D) PayZip");
+                if (toupper(getch())=='B')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is B) Mobikwik");getch();
+
+                break;}
+
+                case 5:
+                printf("\n\nWhich was the first country to print plastic currency ?");
+                printf("\n\n A) Canada\n B) Sweden\n C) Australia\n D) New Zealand");
+                if (toupper(getch())=='C')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is C) Australia");getch();
+                goto score;
+                break;}
+
+            }
+        }
+     }
+     else if(a_o_i=='B')
+     {
+         for(i=1;i<=10;i++)
+        {
+            system("cls");
+            r=i;
+
+            switch(r)
+            {
+            	case 1:
+                printf("\n\nSachin Tendulkar hit his 100th international century against which among the following team?");
+                printf("\n\nA) Sri Lanka\nB) Bangladesh\nC) Pakistan\nD) South Africa");
+                if (toupper(getch())=='B')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is B) Bangladesh");getch();
+
+                break;}
+
+                case 2:
+                printf("\n\nThe word 'Agricultural shot' is known to be used sometimes in which among the following sports?");
+                printf("\n\n A) Cricket\n B) Hockey\n C) Golf\n D) Polo");
+                if (toupper(getch())=='A')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is A) Cricket");getch();
+
+                break;}
+
+                case 3:
+                printf("\n\nWhich among the following country is the host of 2018 Commonwealth Games?");
+                printf("\n\n A) Canada\n B) England\n C) Australia\n D) India");
+                if (toupper(getch())=='C')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is C) Australia");getch();
+
+                break;}
+
+                case 4:
+                printf("\n\nMurugappa Gold Cup is related to which among the following sports?");
+                printf("\n\n A) Football\n B) Hockey\n C) Cricket\n D) Table Tennis");
+                if (toupper(getch())=='B')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is B) Hockey ");getch();
+
+                break;}
+
+                case 5:
+                printf("\n\nWhat is the National Game of England?");
+                printf("\n\n A) Football\n B) Basketball\n C) Cricket\n D) Baseball");
+                if (toupper(getch())=='C')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is C) Cricket");getch();
+                goto score;
+                break;}
+            }
+        }
+     }
+     else if(a_o_i=='C')
+     {
+         for(i=1;i<=10;i++)
+        {
+            system("cls");
+            r=i;
+
+            switch(r)
+            {
+                case 1:
+                printf("\n\nWhich among the following is the largest known number in the world?");
+                printf("\n\n A) 8\n B) googol\n C) googolplex\n D) gram");
+                if (toupper(getch())=='C')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is C) googolplex");getch();
+
+                break;}
+
+                case 2:
+                printf("\n\nAn integer that is divisible by 2 is called:");
+                printf("\n\n A) Even number\n B) Natural number\n C) Odd number\n D) Whole number");
+                if (toupper(getch())=='A')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is A) Even number");getch();
+
+                break;}
+
+                case 3:
+                printf("\n\nIn which number system, there is no symbol for zero?");
+                printf("\n\n A) Hindu Arabic system\n B) Roman\n C) Egyptian\n D) Mesopotamia");
+                if (toupper(getch())=='B')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is B) Roman");getch();
+
+                break;}
+
+                case 4:
+                printf("\n\nIf 5 = V, How does 500 written in roman numeral system?");
+                printf("\n\n A) D\n B) MMMMM\n C) MX\n D) VM");
+                if (toupper(getch())=='A')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is A) V");getch();
+                break;}
+
+				case 5:
+                printf("\n\nAll counting numbers, together with their negatives and zeros constitute the set of __________.");
+                printf("\n\n A) Whole number\n B) Real number\n C) Integers\n D) Odd number");
+                if (toupper(getch())=='C')
+                {printf("\n\nCorrect!!!");countr++;getch();
+                break;getch();}
+                else
+                {printf("\n\nWrong!!! The correct answer is C) Integers");getch();
+                goto score;
+                break;}
+            }
+        }
+     }
+	score:
+    system("cls");
+    printf("\n\n\n You have correctly answered %d/5 questions",countr);
+
+
+
+
+    printf("Press Y to play again and E to exit");
+    choice_2=toupper(getch());
+    if(choice_2=='Y')
+    {
+        goto mainhome_1;
+    }
+
+
+    }
+    else
+    {
+        printf("\n\nStill curious to know the answer of the riddle? Enter Y if yes");
+        choice_3=toupper(getch());
+        if(choice_3=='Y')
+        {
+            printf("\n\n The Answer is SILENCE");
+
+        }
+
+
+    }
+
+
+}
+
+
+
+void help()
+	{system("cls");
+    printf("\n\n                              HELP");
+    printf("\n -------------------------------------------------------------------------");
+    printf("\n ......................... C program KNOW THE ANSWER...........");
+    printf("\n >> Since this quiz is conducted to know the student'interests and his general knowledge ");
+    printf("\n >> Next, you will be guided to a Questionaire round where you will encounter 5 multiple\n choice questions");
+    printf("\n >> To answer, you have to enter the options you feel are correct in small or capital letters");
+    printf("\n >> As soon as you complete the game, you will get your scores ");
+    printf("\n_______________________________________________________________________________________________________");
+    printf("\n                                      ALL THE BEST, ENJOY!!     ");
+     }
+
+
